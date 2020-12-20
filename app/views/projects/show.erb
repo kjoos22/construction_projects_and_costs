@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<h1><%= @p.estimate_number + " - " + @p.project_title %></h1>
+    <h3> <%= @p.address %>
+        <%= @p.city %>
+        <%= @p.state_abbrv %>
+        <%= @p.zip %>
+        <% if @p.no_site == 'N' %>
+            <%= '' %>
+        <% else %>
+            <%= "No Site" %>
+        <% end %></h3>
+    
+
+<html>
