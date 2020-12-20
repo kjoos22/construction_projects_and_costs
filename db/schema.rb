@@ -11,7 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201219211715) do
+ActiveRecord::Schema.define(version: 20201220221520) do
+
+  create_table "estimates", force: :cascade do |t|
+    t.string  "estimate_number"
+    t.string  "submission_title"
+    t.integer "revision"
+    t.string  "scheme"
+    t.string  "sector"
+    t.string  "industry"
+    t.string  "labor_status"
+    t.string  "tax_status"
+    t.string  "icap"
+    t.string  "site_acerage"
+    t.integer "gsf"
+    t.string  "estimate_type"
+    t.string  "design_phase"
+    t.string  "result"
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string "estimate_number"
