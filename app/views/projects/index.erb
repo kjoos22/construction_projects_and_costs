@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<h1>Projects</h1>
+<ul><% @projects.each do |project|%>
+    <li><%= project.estimate_number + " " + project.project_title %></li>
+<% end %></ul>
+
+
+</html>

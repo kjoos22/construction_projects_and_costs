@@ -14,7 +14,8 @@
 ActiveRecord::Schema.define(version: 20201219211715) do
 
   create_table "projects", force: :cascade do |t|
-    t.string "name"
+    t.string "estimate_number"
+    t.string "project_title"
     t.string "address"
     t.string "city"
     t.string "state_abbrv"
