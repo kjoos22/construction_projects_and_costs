@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201220221520) do
+ActiveRecord::Schema.define(version: 20201221151400) do
 
   create_table "estimates", force: :cascade do |t|
     t.string  "estimate_number"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20201220221520) do
   end
 
   create_table "projects", force: :cascade do |t|
-    t.string "estimate_number"
+    t.string "estimating_number"
     t.string "project_title"
     t.string "address"
     t.string "city"

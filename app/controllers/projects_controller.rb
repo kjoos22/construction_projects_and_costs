@@ -6,6 +6,11 @@ class ProjectsController < ApplicationController
         erb :'/projects/index'
     end
 
+    #new
+    get '/projects/new' do
+        erb :'projects/new'
+    end
+
     #create
     get 'projects/new' do
         erb :'projects/new'
