@@ -12,8 +12,9 @@ class ProjectsController < ApplicationController
     end
 
     #create
-    get 'projects/new' do
-        erb :'projects/new'
+    post '/projects' do
+        project = Project.create(params)
+        redirect "projects/#{project.id}"
     end
 
     #show
