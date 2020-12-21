@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <h1><%= @p.estimating_number + " - " + @p.project_title %></h1>
-    <h3> <%= @p.address %>
+    <h2> <%= @p.address %>
         <%= @p.city %>
         <%= @p.state_abbrv %>
         <%= @p.zip %>
@@ -8,7 +8,9 @@
             <%= '' %>
         <% else %>
             <%= "No Site" %>
-        <% end %></h3>
+        <% end %></h2>
+    <br><br>
+    <a href='/projects'>Return to projects</a>
     
 
 <html>

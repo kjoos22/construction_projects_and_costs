@@ -2,7 +2,8 @@
 <h1>Projects</h1>
 
 <ul><% @projects.each do |p|%>
-    <li><%= p.estimating_number + " - " + p.project_title %></li>
+    <a href = '/projects/<%= "#{p.id}" %> '><li><%= p.estimating_number +
+         " - " + p.project_title %></li></a>
 <% end %></ul>
 
 <br><br>
