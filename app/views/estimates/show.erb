@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<h1><%= @e.project.estimating_number + " - " + @e.project.project_title %></h1>
+    <h2> <%= @e.submission_title %>
+        <%= "R#{@e.revision}" %>
+        <% if @e.scheme != '' %>
+            <%= ' Scheme ' + @e.scheme %>
+        <% else %>
+            <%= '' %>
+        <% end %></h2>
+    <ul><li><%= "Sector: #{@e.sector}" %></li>
+        <li><%= "Industry: #{@e.industry}" %></li>
+        <li><%= "Labor Status: #{@e.labor_status}" %></li>
+        <li><%= "Tax Status: #{@e.tax_status}" %></li>
+        <li><%= "ICAP: #{@e.icap}" %></li>
+        <li><%= "Site Acerage: #{@e.site_acerage}" %></li>
+        <li><%= "GSF: #{@e.gsf}" %></li>
+        <li><%= "Estimate Type: #{@e.estimate_type}" %></li>
+        <li><%= "Design Phase: #{@e.design_phase}" %></li>
+        <li><%= "Result: #{@e.result}" %></li>
+    </ul>
+
+    <br><br>
+    <h2>Cost Summary</h2>
+    
+
+<html>
