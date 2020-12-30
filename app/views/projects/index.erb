@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <h1>Projects</h1>
+<h2></h2>
 
 <ul><% @projects.each do |p|%>
     <a href = '/projects/<%= "#{p.id}" %> '><li><%= p.estimating_number +
@@ -8,7 +9,5 @@
 
 <br><br>
 <a href='/projects/new'>Create New Project</a>
-
-
 
 </html>
