@@ -10,7 +10,7 @@ class EstimatesController < ApplicationController
         if @e
             erb :'/estimates/show'
         else 
-            redirect :'/estimates/index'
+            redirect :'/projects/index'
         end
     end   
 
