@@ -1,5 +1,150 @@
 <!DOCTYPE html>
-
-
-
+<h1><%= @s.estimate.project.estimating_number + " - " + 
+    @s.estimate.project.project_title %></h1>
+    <h2><% = @s.estimate.submission_title %>
+        <%= "R#{@s.estimate.revision}" %>
+        <% if @s.estimate.scheme != '' %>
+            <%= ' Scheme ' + @e.scheme %>
+        <% else %>
+            <%= '' %>
+        <% end %>
+        <br>
+        Cost Summary</h2>
+    <% subtotal = 0 %>
+    <ul><li><%= "Demolition: $#{@s.demolition}" if @s.demolition != '0'%></li>
+        <% subtotal += @s.demolition %>
+        <li><%= "Abatement: $#{@s.abatement}" if @s.abatement != '0'%></li>
+        <% subtotal += @s.abatement %>
+        <li><%= "Fencing: $#{@s.fencing}" if @s.fencing != '0'%></li>
+        <% subtotal += @s.fencing %>
+        <li><%= "Sitework: $#{@s.sitework}" if @s.sitework != '0'%></li>
+        <% subtotal += @s.sitework %>
+        <li><%= "Waterfront Access & Bulkhead: $" + 
+            "#{@s.waterfront_access_and_bulkhead}" 
+            if @s.waterfront_access_and_bulkhead != '0'%></li>
+        <% subtotal += @s.waterfront_access_and_bulkhead %>
+        <li><%= "Site Concrete: $#{@s.site_concrete}" 
+            if @s.site_concrete != '0'%></li>
+        <% subtotal += @s.site_concrete %>
+        <li><%= "Asphalt Paving & Striping: $" + 
+            "#{@s.aspalt_paving_and_striping}" 
+            if @s.asphalt_paving_and_striping != '0'%></li>
+        <% subtotal += @s.asphalt_paving_and_striping %>
+        <li><%= "Landscaping: $#{@s.landscaping}" if @s.landscaping != '0'%></li>
+        <% subtotal += @s.landscaping %>
+        <li><%= "Piles: $#{@s.piles}" if @s.piles != '0'%></li>
+        <% subtotal += @s.piles %>
+        <li><%= "Ground Improvements: $#{@s.ground_improvements}" 
+            if @s.ground_improvements != '0'%></li>
+        <% subtotal += @s.ground_improvements %>
+        <li><%= "Concrete: $#{@s.concrete}" if @s.concrete != '0'%></li>
+        <% subtotal += @s.concrete %>
+        <li><%= "Precast Concrete Panels: $" + 
+            "#{@s.precast_concrete_panels}"
+            if s.precast_concrete_panels != '0'%></li>
+        <% subtotal += @s.precast_concrete_panels %>
+        <li><%= "Masonry: $#{@s.masonry}" if @s.masonry != '0'%></li>
+        <% subtotal += @s.masonry %>
+        <li><%= "Structural Steel: $#{@s.structural_steel}" 
+            if s.structural_steel != '0'%></li>
+        <% subtotal += @s.structural_steel %>
+        <li><%= "Millwork: $#{@s.millwork}" if @s.millwork != '0'%></li>
+        <% subtotal += @s.millwork %>
+        <li><%= "EIFS: $#{@s.eifs}" if @s.eifs != '0'%></li>
+        <% subtotal += @s.eifs %>
+        <li><%= "Roofing: $#{@s.roofing}" if @s.roofing != '0'%></li>
+        <% subtotal += @s.roofing %>
+        <li><%= "Thermal & Moisture Protection: $" + 
+            "#{@s.thermal_and_moisture_protection}" 
+            if @s.thermal_and_moisture_protection != '0'%></li>
+        <% subtotal += @s.thermal_and_moisture_protection %>
+        <li><%= "Metal Panels: $#{@s.metal_panels}" 
+            if @s.metal_panels != '0'%></li>
+        <% subtotal += @s.metal_panels %>
+        <li><%= "Prefab Facade Mega Panels: $" + 
+            "#{@s.prefab_facade_mega_panels}" 
+            if @s.prefab_facade_mega_panels != '0'%></li>
+        <% subtotal += @s.prefab_facade_mega_panels %>
+        <li><%= "Applied Fireproofing: $#{@s.applied_fireproofing}" 
+            if @s.applied_fireproofing != '0'%></li>
+        <% subtotal += @s.applied_fireproofing %>
+        <li><%= "Doors, Frames, and Hardware: $" + 
+            "#{@s.doors_frames_and_hardware}" 
+            if @s.doors_frames_and_hardware != '0'%></li>
+        <% subtotal += @s.doors_frames_and_hardware %>
+        <li><%= "Overhead Doors: $#{@s.overhead_doors}" 
+            if @s.overhead_doors != '0'%></li>
+        <% subtotal += @s.overhead_doors%>
+        <li><%= "Glass and Glazing: $#{@s.glass_and_glazing}" 
+            if @s.glass_and_glazing != '0'%></li>
+        <% subtotal += @s.glass_and_glazing %>
+        <li><%= "Carpentry and Drywall: $" + 
+            "#{@s.carpentry_and_drywall}"
+            if @s.carpentry_and_drywall != '0'%></li>
+        <% subtotal += @s.carpentry_and_drywall %>
+        <li><%= "Tile: $#{@s.tile}" if @s.tile != '0'%></li>
+        <% subtotal += @s.tile %>
+        <li><%= "Flooring: $#{@s.flooring}" if @s.flooring != '0'%></li>
+        <% subtotal += @s.flooring %>
+        <li><%= "Paint & Wallcovering: $" + 
+            "#{@s.paint_and_wallcovering}" 
+            if @s.paint_and_wallcovering != '0'%></li>
+        <% subtotal += @s.paint_and_wallcovering %>
+        <li><%= "Signage: $#{@s.signage}" if @s.signage != '0'%></li>
+        <% subtotal += @s.signage %>
+        <li><%= "Division 10 Specialties: $"
+            "#{@s.divsion_10_specialties}" 
+            if @s.division_10_specialties != '0'%></li>
+        <% subtotal += @s.division_10_specialties %>
+        <li><%= "Loading Dock Equipment: $#{@s.loading_dock_equpment}"
+            if @s.loading_dock_equipment != '0'%></li>
+        <% subtotal += @s.loading_dock_equipment %>
+        <li><%= "Kitchen Equipment: $#{@s.kitchen_equipment}" 
+            if @s.kitchen_equipment != '0'%></li>
+        <% subtotal += @s.kitchen_equipment %>
+        <li><%= "Operable Partitions: $#{@s.operable_partitions}" 
+            if @s.operable_partitions != '0'%></li>
+        <% subtotal += @s.operable_partitions %>
+        <li><%= "Vertical Transportation: $#{@s.vertical_transportation}"
+            if @s.vertial_transportation != '0'%></li>
+        <% subtotal += @s.vertical_transportation %>
+        <li><%= "Fire Suppression: $#{@s.fire_supression}"
+            if @s.fire_supression != '0'%></li>
+        <% subtotal += @s.fire_supression %>
+        <li><%= "HVAC: $#{@s.hvac}" if @s.hvac != '0'%></li>
+        <% subtotal += @s.hvac %>
+        <li><%= "Plumbing: $#{@s.plumbing}" if @s.plumbing != '0'%></li>
+        <% subtotal += @s.plumbing %>
+        <li><%= "Electric: $#{@s.electric}" if @s.electric != '0'%></li>
+        <% subtotal += @s.electric %>
+        <li><%= "Final Cleaning: $#{@s.final_cleaning}"
+            if @s.final_cleaning != '0'%></li>
+        <% subtotal += @s.final_cleaning%>
+        <li><%= "General Requirements: $#{@s.general_requirements}"
+            if @s.general_requirements != '0'%></li>
+        <% subtotal += @s.general_requirements %>
+        <li><%= "Site Safety: $#{@s.site_safety}" 
+            if @s.site_safety != '0'%></li>
+        <% subtotal += @s.site_safety %>
+        <li><%= "Site Security: $#{@s.site_security}"
+            if @s.site_security != '0'%></li>
+        <% subtotal += @s.site_security %>
+        <li><%= "Subtotal (Hardcost): $#{subtotal}" %></li>
+        <% contingency = subtotal * @s.contingency_pct %>
+        <li><%= "Contingency: $#{contingency}" %></li>
+        <% subtotal += contingency %>
+        <% sdi = subtotal * @s.sdi_pct %>
+        <li><%= "Subcontractor Default Insurance: $#{sdi}" %></li>
+        <% subtotal += sdi %>
+        <% gencons = subtotal * @s.general_conditions_pct %>
+        <li><%= "General Conditions: $#{gencons}" %></li>
+        <% subtotal += gencons %>
+        <li><%= "Subtotal: $#{subtotal}" %></li>
+        <% fee = subtotal * @s.fee_pct %>
+        <li><%= "Fee: $#{fee}" %></li>
+        <% subtotal += fee %>
+        <% insurance = subtotal * @s.insurance_pct %>
+        <li><%= "Insurance: $#{insurance}" %></li>
+        <% subtotal += insurance %>
+        <li><%= "Total Estimate: $#{subtotal}" %></li>
 </html>
