@@ -20,6 +20,11 @@
 
       <footer class="branding">
         <small>&copy; 2020 <strong>ConstructionProjectsAndCosts</strong></small>
+        <br>
+        <% if logged_in? %>
+          <small><strong>Current User: </strong><%= current_user.username %></small>
+          <small><a href='/logout'>Log Out</a>
+        <% end %>
       </footer>
     </div>
 
