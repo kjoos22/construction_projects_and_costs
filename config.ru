@@ -7,4 +7,5 @@ end
 use ProjectsController
 use EstimatesController
 use SummariesController
+use UsersController
 run ApplicationController

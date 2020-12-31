@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201231144911) do
+ActiveRecord::Schema.define(version: 20201231154629) do
 
   create_table "estimates", force: :cascade do |t|
     t.string  "project_id"
@@ -98,6 +98,11 @@ ActiveRecord::Schema.define(version: 20201231144911) do
     t.integer "fee"
     t.integer "insurance"
     t.integer "total_estimate"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
   end
 
 end

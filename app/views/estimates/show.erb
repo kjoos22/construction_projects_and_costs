@@ -23,7 +23,7 @@
     <% if @e.summary == nil %>
         <h3><a href='/summaries/new'>Enter Cost Summary</a></h3>
     <% else %>
-        <h3>View Cost Summary</h3>
+        <h3><a href='/summaries/<%= "#{@e.summary.id}" %>'>View Cost Summary</a></h3>
     <% end %>
     
     
