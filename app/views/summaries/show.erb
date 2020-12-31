@@ -10,6 +10,10 @@
         <% end %>
         <br>
         Cost Summary</h2>
+    <form method="POST" action="/summaries/<%=@s.id%>">
+        <input id="hidden" type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete">
+    </form>
     <ul><li><%= "Demolition: $#{@s.demolition}" if @s.demolition != nil %></li>
         <li><%= "Abatement: $#{@s.abatement}" if @s.abatement != nil %></li>
         <li><%= "Fencing: $#{@s.fencing}" if @s.fencing != nil %></li>
@@ -39,7 +43,7 @@
         <li><%= "Flooring: $#{@s.flooring}" if @s.flooring != nil %></li>
         <li><%= "Paint & Wallcovering: $" + "#{@s.paint_and_wallcovering}" if @s.paint_and_wallcovering != nil %></li>
         <li><%= "Signage: $#{@s.signage}" if @s.signage != nil %></li>
-        <li><%= "Division 1nil Specialties: $" + "#{@s.division_1nil_specialties}" if @s.division_1nil_specialties != nil %></li>
+        <li><%= "Division 1nil Specialties: $" + "#{@s.division_10_specialties}" if @s.division_10_specialties != nil %></li>
         <li><%= "Loading Dock Equipment: $#{@s.loading_dock_equipment}" if @s.loading_dock_equipment != nil %></li>
         <li><%= "Kitchen Equipment: $#{@s.kitchen_equipment}" if @s.kitchen_equipment != nil %></li>
         <li><%= "Operable Partitions: $#{@s.operable_partitions}" if @s.operable_partitions != nil %></li>

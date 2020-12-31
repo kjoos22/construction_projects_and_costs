@@ -7,6 +7,10 @@
         <% else %>
             <%= '' %>
         <% end %></h2>
+    <form method="POST" action="/estimates/<%=@e.id%>">
+        <input id="hidden" type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete">
+    </form>
     <ul><li><%= "Sector: #{@e.sector}" %></li>
         <li><%= "Industry: #{@e.industry}" %></li>
         <li><%= "Labor Status: #{@e.labor_status}" %></li>

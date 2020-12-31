@@ -16,13 +16,21 @@ class EstimatesController < ApplicationController
 
     #create
     post '/estimates' do
-        estimate = Estimate.new(params)
+        estimate = current_user.estimates.build(params)
         if estimate.save
             redirect "estimates/#{estimate.id}"
         else
             @errors = estimate.errors.full_mesages.join(" - ")
             erb :'/estimates/new'
         end
+    end
+
+    #delete
+    delete '/estimates/:id' do
+        estimate = Estimate.find_by(id: params[:id])
+        estimate.destroy
+        
+        redirect :'/projects'
     end
 
     

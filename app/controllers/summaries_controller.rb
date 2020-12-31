@@ -16,8 +16,15 @@ class SummariesController < ApplicationController
 
     #create
     post '/summaries' do
-        summary = Summary.create(params)
+        summary = current_user.summaries.create(params)
         redirect "summaries/#{summary.id}"
     end
 
+    #delete
+    delete '/summaries/:id' do
+        summary = Summary.find_by(id: params[:id])
+        summary.destroy
+        
+        redirect :'/projects'
+    end
 end

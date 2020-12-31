@@ -22,6 +22,14 @@ class ProjectsController < ApplicationController
         end
     end
 
+    #delete
+    delete '/projects/:id' do
+        project = Project.find_by(id: params[:id])
+        project.destroy
+        
+        redirect :'/projects'
+    end
+
     #show
     get '/projects/:id' do
         @p = Project.find_by(id: params[:id])
@@ -30,6 +38,8 @@ class ProjectsController < ApplicationController
         else 
             redirect :'/projects/index'
         end
-    end    
+    end
+    
+    
     
 end

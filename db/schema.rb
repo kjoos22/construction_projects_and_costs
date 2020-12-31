@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201231184740) do
+ActiveRecord::Schema.define(version: 20201231191110) do
 
   create_table "estimates", force: :cascade do |t|
     t.string  "project_id"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20201231184740) do
     t.string  "estimate_type"
     t.string  "design_phase"
     t.string  "result"
+    t.integer "user_id"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -99,6 +100,7 @@ ActiveRecord::Schema.define(version: 20201231184740) do
     t.integer "fee"
     t.integer "insurance"
     t.integer "total_estimate"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
