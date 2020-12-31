@@ -13,7 +13,7 @@ class ProjectsController < ApplicationController
 
     #create
     post '/projects' do
-        project = Project.new(params)
+        project = current_user.projects.build(params)
         if project.save
             redirect "projects/#{project.id}"
         else

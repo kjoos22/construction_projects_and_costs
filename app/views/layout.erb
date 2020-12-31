@@ -22,8 +22,10 @@
         <small>&copy; 2020 <strong>ConstructionProjectsAndCosts</strong></small>
         <br>
         <% if logged_in? %>
-          <small><strong>Current User: </strong><%= current_user.username %></small>
+          <small><strong>Current User: </strong><%= current_user.username %></small><br>
           <small><a href='/logout'>Log Out</a>
+        <% else %>
+          <small><a href='/login'>Log In</a>
         <% end %>
       </footer>
     </div>

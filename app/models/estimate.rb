@@ -1,5 +1,6 @@
 class Estimate < ActiveRecord::Base
     belongs_to :project
+    belongs_to :user
     has_one :summary
     validates :project_id, presence: :true
     validates :submission_title, presence: :true
