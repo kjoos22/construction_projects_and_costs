@@ -10,48 +10,48 @@
         <% end %>
         <br>
         Cost Summary</h2>
-    <ul><li><%= "Demolition: $#{@s.demolition}" if @s.demolition != 0%></li>
-        <li><%= "Abatement: $#{@s.abatement}" if @s.abatement != 0%></li>
-        <li><%= "Fencing: $#{@s.fencing}" if @s.fencing != 0%></li>
-        <li><%= "Sitework: $#{@s.sitework}" if @s.sitework != 0%></li>
-        <li><%= "Waterfront Access & Bulkhead: $" + "#{@s.waterfront_access_and_bulkhead}" if @s.waterfront_access_and_bulkhead != 0%></li>
-        <li><%= "Site Concrete: $#{@s.site_concrete}" if @s.site_concrete != 0%></li>
-        <li><%= "Asphalt Paving & Striping: $" + "#{@s.asphalt_paving_and_striping}" if @s.asphalt_paving_and_striping != 0%></li>
-        <li><%= "Landscaping: $#{@s.landscaping}" if @s.landscaping != 0%></li>
-        <li><%= "Piles: $#{@s.piles}" if @s.piles != 0%></li>
-        <li><%= "Ground Improvements: $#{@s.ground_improvements}" if @s.ground_improvements != 0 %></li>
-        <li><%= "Concrete: $#{@s.concrete}" if @s.concrete != 0%></li>
-        <li><%= "Precast Concrete Panels: $" + "#{@s.precast_concrete_panels}" if @s.precast_concrete_panels != 0%></li>
-        <li><%= "Masonry: $#{@s.masonry}" if @s.masonry != 0%></li>
-        <li><%= "Structural Steel: $#{@s.structural_steel}" if @s.structural_steel != 0%></li>
-        <li><%= "Millwork: $#{@s.millwork}" if @s.millwork != 0%></li>
-        <li><%= "EIFS: $#{@s.eifs}" if @s.eifs != 0%></li>
-        <li><%= "Roofing: $#{@s.roofing}" if @s.roofing != 0%></li>
-        <li><%= "Thermal & Moisture Protection: $" + "#{@s.thermal_and_moisture_protection}" if @s.thermal_and_moisture_protection != 0%></li>
-        <li><%= "Metal Panels: $#{@s.metal_panels}" if @s.metal_panels != 0%></li>
-        <li><%= "Prefab Facade Mega Panels: $" + "#{@s.prefab_facade_mega_panels}" if @s.prefab_facade_mega_panels != 0%></li>
-        <li><%= "Applied Fireproofing: $#{@s.applied_fireproofing}" if @s.applied_fireproofing != 0%></li>
-        <li><%= "Doors, Frames, and Hardware: $" + "#{@s.doors_frames_and_hardware}" if @s.doors_frames_and_hardware != 0%></li>
-        <li><%= "Overhead Doors: $#{@s.overhead_doors}" if @s.overhead_doors != 0%></li>
-        <li><%= "Glass and Glazing: $#{@s.glass_and_glazing}" if @s.glass_and_glazing != 0%></li>
-        <li><%= "Carpentry and Drywall: $" + "#{@s.carpentry_and_drywall}" if @s.carpentry_and_drywall != 0%></li>
-        <li><%= "Tile: $#{@s.tile}" if @s.tile != 0%></li>
-        <li><%= "Flooring: $#{@s.flooring}" if @s.flooring != 0%></li>
-        <li><%= "Paint & Wallcovering: $" + "#{@s.paint_and_wallcovering}" if @s.paint_and_wallcovering != 0%></li>
-        <li><%= "Signage: $#{@s.signage}" if @s.signage != 0%></li>
-        <li><%= "Division 10 Specialties: $" + "#{@s.division_10_specialties}" if @s.division_10_specialties != 0%></li>
-        <li><%= "Loading Dock Equipment: $#{@s.loading_dock_equipment}" if @s.loading_dock_equipment != 0%></li>
-        <li><%= "Kitchen Equipment: $#{@s.kitchen_equipment}" if @s.kitchen_equipment != 0%></li>
-        <li><%= "Operable Partitions: $#{@s.operable_partitions}" if @s.operable_partitions != 0%></li>
-        <li><%= "Vertical Transportation: $#{@s.vertical_transportation}" if @s.vertical_transportation != 0%></li>
-        <li><%= "Fire Suppression: $#{@s.fire_supression}" if @s.fire_supression != 0%></li>
-        <li><%= "HVAC: $#{@s.hvac}" if @s.hvac != 0%></li>
-        <li><%= "Plumbing: $#{@s.plumbing}" if @s.plumbing != 0%></li>
-        <li><%= "Electric: $#{@s.electric}" if @s.electric != 0%></li>
-        <li><%= "Final Cleaning: $#{@s.final_cleaning}" if @s.final_cleaning != 0%></li>
-        <li><%= "General Requirements: $#{@s.general_requirements}" if @s.general_requirements != 0%></li>
-        <li><%= "Site Safety: $#{@s.site_safety}" if @s.site_safety != 0%></li>
-        <li><%= "Site Security: $#{@s.site_security}" if @s.site_security != 0%></li>
+    <ul><li><%= "Demolition: $#{@s.demolition}" if @s.demolition != nil %></li>
+        <li><%= "Abatement: $#{@s.abatement}" if @s.abatement != nil %></li>
+        <li><%= "Fencing: $#{@s.fencing}" if @s.fencing != nil %></li>
+        <li><%= "Sitework: $#{@s.sitework}" if @s.sitework != nil %></li>
+        <li><%= "Waterfront Access & Bulkhead: $" + "#{@s.waterfront_access_and_bulkhead}" if @s.waterfront_access_and_bulkhead != nil %></li>
+        <li><%= "Site Concrete: $#{@s.site_concrete}" if @s.site_concrete != nil %></li>
+        <li><%= "Asphalt Paving & Striping: $" + "#{@s.asphalt_paving_and_striping}" if @s.asphalt_paving_and_striping != nil %></li>
+        <li><%= "Landscaping: $#{@s.landscaping}" if @s.landscaping != nil %></li>
+        <li><%= "Piles: $#{@s.piles}" if @s.piles != nil %></li>
+        <li><%= "Ground Improvements: $#{@s.ground_improvements}" if @s.ground_improvements != nil %></li>
+        <li><%= "Concrete: $#{@s.concrete}" if @s.concrete != nil %></li>
+        <li><%= "Precast Concrete Panels: $" + "#{@s.precast_concrete_panels}" if @s.precast_concrete_panels != nil %></li>
+        <li><%= "Masonry: $#{@s.masonry}" if @s.masonry != nil %></li>
+        <li><%= "Structural Steel: $#{@s.structural_steel}" if @s.structural_steel != nil %></li>
+        <li><%= "Millwork: $#{@s.millwork}" if @s.millwork != nil %></li>
+        <li><%= "EIFS: $#{@s.eifs}" if @s.eifs != nil %></li>
+        <li><%= "Roofing: $#{@s.roofing}" if @s.roofing != nil %></li>
+        <li><%= "Thermal & Moisture Protection: $" + "#{@s.thermal_and_moisture_protection}" if @s.thermal_and_moisture_protection != nil %></li>
+        <li><%= "Metal Panels: $#{@s.metal_panels}" if @s.metal_panels != nil %></li>
+        <li><%= "Prefab Facade Mega Panels: $" + "#{@s.prefab_facade_mega_panels}" if @s.prefab_facade_mega_panels != nil %></li>
+        <li><%= "Applied Fireproofing: $#{@s.applied_fireproofing}" if @s.applied_fireproofing != nil %></li>
+        <li><%= "Doors, Frames, and Hardware: $" + "#{@s.doors_frames_and_hardware}" if @s.doors_frames_and_hardware != nil %></li>
+        <li><%= "Overhead Doors: $#{@s.overhead_doors}" if @s.overhead_doors != nil %></li>
+        <li><%= "Glass and Glazing: $#{@s.glass_and_glazing}" if @s.glass_and_glazing != nil %></li>
+        <li><%= "Carpentry and Drywall: $" + "#{@s.carpentry_and_drywall}" if @s.carpentry_and_drywall != nil %></li>
+        <li><%= "Tile: $#{@s.tile}" if @s.tile != nil %></li>
+        <li><%= "Flooring: $#{@s.flooring}" if @s.flooring != nil %></li>
+        <li><%= "Paint & Wallcovering: $" + "#{@s.paint_and_wallcovering}" if @s.paint_and_wallcovering != nil %></li>
+        <li><%= "Signage: $#{@s.signage}" if @s.signage != nil %></li>
+        <li><%= "Division 1nil Specialties: $" + "#{@s.division_1nil_specialties}" if @s.division_1nil_specialties != nil %></li>
+        <li><%= "Loading Dock Equipment: $#{@s.loading_dock_equipment}" if @s.loading_dock_equipment != nil %></li>
+        <li><%= "Kitchen Equipment: $#{@s.kitchen_equipment}" if @s.kitchen_equipment != nil %></li>
+        <li><%= "Operable Partitions: $#{@s.operable_partitions}" if @s.operable_partitions != nil %></li>
+        <li><%= "Vertical Transportation: $#{@s.vertical_transportation}" if @s.vertical_transportation != nil %></li>
+        <li><%= "Fire Suppression: $#{@s.fire_supression}" if @s.fire_supression != nil %></li>
+        <li><%= "HVAC: $#{@s.hvac}" if @s.hvac != nil %></li>
+        <li><%= "Plumbing: $#{@s.plumbing}" if @s.plumbing != nil %></li>
+        <li><%= "Electric: $#{@s.electric}" if @s.electric != nil %></li>
+        <li><%= "Final Cleaning: $#{@s.final_cleaning}" if @s.final_cleaning != nil %></li>
+        <li><%= "General Requirements: $#{@s.general_requirements}" if @s.general_requirements != nil %></li>
+        <li><%= "Site Safety: $#{@s.site_safety}" if @s.site_safety != nil %></li>
+        <li><%= "Site Security: $#{@s.site_security}" if @s.site_security != nil %></li>
         <br><h2></h2>
         <li><%= "Subtotal (Hardcost): $#{@s.subtotal_hardcost}" %></li>
         <li><%= "Contingency: $#{@s.contingency} at #{@s.contingency_pct}%" %></li>        
