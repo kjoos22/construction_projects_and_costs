@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <h1>Enter New Project</h1>
-
+<h2></h2>
+<%= @errors %>
 <form method='POST' action='/projects'>
     <label for='estimating_number'>Estimating Number:</label>
     <input type='text' name='estimating_number'><br><br>
@@ -14,7 +15,7 @@
     <input type='text' name='state_abbrv'><br><br>
     <label for='zip'>Zip:</label>
     <input type='text' name='zip'><br><br>
-    <label for='zip'>No Site:</label>
-    <input type='text' name='no_site' value='N'><br><br>
+    <!--<label for='zip'>No Site:</label>
+    <input type='text' name='no_site' value='N'><br><br>-->
     <input type='submit' value='Create Project'>
 <html>

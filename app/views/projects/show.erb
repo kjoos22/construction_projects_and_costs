@@ -4,11 +4,11 @@
         <%= @p.city %>
         <%= @p.state_abbrv %>
         <%= @p.zip %>
-        <% if @p.no_site == 'N' %>
+        <!--<% if @p.no_site == 'N' %>
             <%= '' %>
         <% else %>
             <%= "No Site" %>
-        <% end %></h2>
+        <% end %>--></h2>
     <h3>Estimates</h3>
     <% @p.estimates.each do |e| %>
         <% scheme = e.scheme if e.scheme != '' %>

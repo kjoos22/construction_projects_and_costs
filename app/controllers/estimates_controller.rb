@@ -16,8 +16,13 @@ class EstimatesController < ApplicationController
 
     #create
     post '/estimates' do
-        estimate = Estimate.create(params)
-        redirect "estimates/#{estimate.id}"
+        estimate = Estimate.new(params)
+        if estimate.save
+            redirect "estimates/#{estimate.id}"
+        else
+            @errors = estimate.errors.full_mesages.join(" - ")
+            erb :'/estimates/new'
+        end
     end
 
     

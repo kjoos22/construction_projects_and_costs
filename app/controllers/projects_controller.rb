@@ -13,8 +13,13 @@ class ProjectsController < ApplicationController
 
     #create
     post '/projects' do
-        project = Project.create(params)
-        redirect "projects/#{project.id}"
+        project = Project.new(params)
+        if project.save
+            redirect "projects/#{project.id}"
+        else
+            @errors = project.errors.full_messages.join(" - ")
+            erb :'/projects/new'
+        end
     end
 
     #show
