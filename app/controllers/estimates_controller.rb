@@ -18,22 +18,28 @@ class EstimatesController < ApplicationController
     #delete
     delete '/estimates/:id' do
         estimate = Estimate.find_by(id: params[:id])
-        estimate.destroy
-        
-        redirect :'/projects'
+        if estimate.user == current_user
+            estimate.destroy
+            redirect :'/projects'
+        else
+            redirect '/projects'
+        end
     end
 
     #edit
     get '/estimates/:id/edit' do
         @e = Estimate.find_by(id: params[:id])
-    
-        erb :'/estimates/edit'
+        if @e.user == current_user
+            erb :'/estimates/edit'
+        else
+            redirect "/projects"
+        end
     end
 
     patch '/estimates/:id' do
-        binding.pry
         estimate = Estimate.find_by(id: params[:id])
         estimate.update(params[:u])
+        estimate.save
      
         redirect "/estimates/#{estimate.id}"
     end

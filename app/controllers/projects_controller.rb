@@ -25,24 +25,34 @@ class ProjectsController < ApplicationController
     #delete
     delete '/projects/:id' do
         project = Project.find_by(id: params[:id])
-        project.destroy
+        if project.user == current_user
+            project.destroy
+            redirect :'/projects'
+        else
+            redirect '/projects'
+        end
         
-        redirect :'/projects'
+        
     end
 
     #edit
     get '/projects/:id/edit' do
         @p = Project.find_by(id: params[:id])
-    
-        erb :'/projects/edit'
+        if @p.user == current_user
+            erb :'/projects/edit'
+        else
+            redirect '/projects'
+        end
     end
 
     patch '/projects/:id' do
-        binding.pry
         project = Project.find_by(id: params[:id])
-        project.update(params[:u])
-     
-        redirect "/projects/#{project.id}"
+        if project.user == current_user
+            project.update(params[:u])
+            redirect "/projects/#{project.id}"
+        else
+            redirect '/projects'
+        end
     end
 
     #show

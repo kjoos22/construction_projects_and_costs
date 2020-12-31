@@ -23,8 +23,11 @@ class SummariesController < ApplicationController
     #delete
     delete '/summaries/:id' do
         summary = Summary.find_by(id: params[:id])
-        summary.destroy
-        
-        redirect :'/projects'
+        if summary.user == current_user
+            summary.destroy        
+            redirect :'/projects'
+        else
+            redirect '/projects'
+        end
     end
 end
