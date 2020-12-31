@@ -6,7 +6,7 @@ class SummariesController < ApplicationController
 
     #show
     get '/summaries/:id' do
-        @s = Sumarry.find_by(id: params[:id])
+        @s = Summary.find_by(id: params[:id])
         if @s
             erb :'/summaries/show'
         else 
@@ -16,7 +16,7 @@ class SummariesController < ApplicationController
 
     #create
     post '/summaries' do
-        sumarry = Summary.create(params)
+        summary = Summary.create(params)
         redirect "summaries/#{summary.id}"
     end
 

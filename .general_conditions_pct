@@ -1,0 +1,15 @@
+
+[1mFrom:[0m /mnt/c/Dev/Flatiron/Projects/sinatra/construction_projects_and_costs/app/views/summaries/show.erb:105 self.__tilt_70368157145460:
+
+    [1;34m100[0m:         <li><%= "Contingency: $#{contingency}" %></li>
+    [1;34m101[0m:         <% subtotal += contingency %>
+    [1;34m102[0m:         <% sdi = subtotal * (1/@s.sdi_pct.to_i) %>
+    [1;34m103[0m:         <li><%= "Subcontractor Default Insurance: $#{sdi}" %></li>
+    [1;34m104[0m:         <% subtotal += sdi %>
+ => [1;34m105[0m:         <% binding.pry %>
+    [1;34m106[0m:         <% gencons = subtotal * (1/@s.general_conditions_pct.to_i) %>
+    [1;34m107[0m:         <li><%= "General Conditions: $#{gencons}" %></li>
+    [1;34m108[0m:         <% subtotal += gencons %>
+    [1;34m109[0m:         <li><%= "Subtotal: $#{subtotal}" %></li>
+    [1;34m110[0m:         <% fee = subtotal * (1/@s.fee_pct.to_i) %>
+
