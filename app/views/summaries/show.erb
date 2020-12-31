@@ -10,7 +10,6 @@
         <% end %>
         <br>
         Cost Summary</h2>
-    <% subtotal = 0 %>
     <ul><li><%= "Demolition: $#{@s.demolition}" if @s.demolition != 0%></li>
         <li><%= "Abatement: $#{@s.abatement}" if @s.abatement != 0%></li>
         <li><%= "Fencing: $#{@s.fencing}" if @s.fencing != 0%></li>
