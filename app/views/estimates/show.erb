@@ -20,7 +20,13 @@
     </ul>
 
     <br><br>
-    <h2>Cost Summary</h2>
+    <% if @e.summary == nil %>
+        <h3><a href='/summaries/new'>Enter Cost Summary</a></h3>
+    <% else %>
+        <h3>View Cost Summary</h3>
+    <% end %>
+    
+    
     
 
 <html>

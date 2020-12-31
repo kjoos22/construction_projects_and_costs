@@ -16,7 +16,6 @@ class EstimatesController < ApplicationController
 
     #create
     post '/estimates' do
-        binding.pry
         estimate = Estimate.create(params)
         redirect "estimates/#{estimate.id}"
     end
