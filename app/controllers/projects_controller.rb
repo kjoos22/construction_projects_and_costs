@@ -30,6 +30,21 @@ class ProjectsController < ApplicationController
         redirect :'/projects'
     end
 
+    #edit
+    get '/projects/:id/edit' do
+        @p = Project.find_by(id: params[:id])
+    
+        erb :'/projects/edit'
+    end
+
+    patch '/projects/:id' do
+        binding.pry
+        project = Project.find_by(id: params[:id])
+        project.update(params[:u])
+     
+        redirect "/projects/#{project.id}"
+    end
+
     #show
     get '/projects/:id' do
         @p = Project.find_by(id: params[:id])

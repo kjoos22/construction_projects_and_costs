@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<h1>Edit Project</h1>
+<h2></h2>
+<h3 style="color:red"><%= @errors %></h3>
+<form method='POST' action='/projects/<%=@p.id%>'>
+    <input id="hidden" type="hidden" name="_method" value="PATCH">
+    <label for='estimating_number'>Estimating Number:</label>
+    <input type='text' name='u[estimating_number]' value=<%=@p.estimating_number%>><br><br>
+    <label for='project_title'>Project Title:</label>
+    <input type='text' name='u[project_title]' value=<%=@p.project_title%>><br><br>
+    <label for='address'>Address:</label>
+    <input type='text' name='u[address]' value=<%=@p.address%>><br><br>
+    <label for='city'>City:</label>
+    <input type='text' name='u[city]' value=<%=@p.city%>><br><br>
+    <label for='state_abbrv'>State:</label>
+    <input type='text' name='u[state_abbrv]' value=<%=@p.state_abbrv%>><br><br>
+    <label for='zip'>Zip:</label>
+    <input type='text' name='u[zip]' value=<%=@p.zip%>><br><br>
+    <!--<label for='zip'>No Site:</label>
+    <input type='text' name='no_site' value='N'><br><br>-->
+    <input type='submit' value='Update Project'>
+<html>

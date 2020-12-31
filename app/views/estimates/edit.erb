@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<h1>Edit Estimate</h1>
+<h2></h2>
+<h3 style="color:red"><%= @errors %></h3>
+<form method='POST' action='/estimates/<%=@e.id%>'>
+    <input id="hidden" type="hidden" name="_method" value="PATCH">
+    <label for='project_id'>Project ID:</label>
+    <input type='number' name='u[project_id]' value=<%=@e.project_id%>><br><br>
+
+    <label for='submission_title'>Submission Title:</label>
+    <input type='text' name='u[submission_title]' value=<%=@e.submission_title%>><br><br>
+
+    <label for='revision'>Revision:</label>
+    <input type='text' name='u[revision]'  value=<%=@e.revision%>><br><br>
+
+    <label for='scheme'>Scheme:</label>
+    <input type='text' name='u[scheme]'  value=<%=@e.scheme%>><br><br>
+
+    <label for='sector'>Sector:</label>
+    <input type='text' name='u[sector]' value=<%=@e.sector%>><br><br>
+
+    <label for='industry'>Indsutry:</label>
+    <input type='text' name='u[industry]'  value=<%=@e.industry%>><br><br>
+
+    <label for='labor_status'>Labor Status:</label>
+    <input type='text' name='u[labor_status]'  value=<%=@e.labor_status%>><br><br>
+
+    <label for='tax_status'>Tax Status:</label>
+    <input type='text' name='u[tax_status]' value=<%=@e.tax_status%>><br><br>
+
+    <label for='icap'>ICAP:</label>
+    <input type='text' name='u[icap]' value=<%=@e.icap%>><br><br>
+
+    <label for='site_acerage'>Site Acerage:</label>
+    <input type='text' name='u[site_acerage]' value=<%=@e.site_acerage%>><br><br>
+
+    <label for='gsf'>GSF:</label>
+    <input type='text' name='u[gsf]' value=<%=@e.gsf%>><br><br>
+
+    <label for='estimate_type'>Estimate Type:</label>
+    <input type='text' name='u[estimate_type]' value=<%=@e.estimate_type%>><br><br>
+
+    <label for='design_phase'>Design Phase:</label>
+    <input type='text' name='u[design_phase]' value=<%=@e.design_phase%>><br><br>
+
+    <label for='result'>Result:</label>
+    <input type='text' name='u[result]' value=<%=@e.result%>><br><br>
+    
+    <input type='submit' value='Update Estimate'>    
+<html>

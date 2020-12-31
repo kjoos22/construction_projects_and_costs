@@ -7,10 +7,6 @@
         <% else %>
             <%= '' %>
         <% end %></h2>
-    <form method="POST" action="/estimates/<%=@e.id%>">
-        <input id="hidden" type="hidden" name="_method" value="DELETE">
-        <input type="submit" value="Delete">
-    </form>
     <ul><li><%= "Sector: #{@e.sector}" %></li>
         <li><%= "Industry: #{@e.industry}" %></li>
         <li><%= "Labor Status: #{@e.labor_status}" %></li>
@@ -24,11 +20,16 @@
     </ul>
 
     <br><br>
+    <h3><a href='/estimates/<%= "#{@e.id}/edit" %>'>Edit Estimate</a></h3>
     <% if @e.summary == nil %>
         <h3><a href='/summaries/new'>Enter Cost Summary</a></h3>
     <% else %>
         <h3><a href='/summaries/<%= "#{@e.summary.id}" %>'>View Cost Summary</a></h3>
     <% end %>
+    <form method="POST" action="/estimates/<%=@e.id%>">
+        <input id="hidden" type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete">
+    </form>
     
     
     

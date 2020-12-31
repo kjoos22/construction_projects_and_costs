@@ -9,10 +9,7 @@
         <% else %>
             <%= "No Site" %>
         <% end %>--></h2>
-    <form method="POST" action="/projects/<%=@p.id%>">
-        <input id="hidden" type="hidden" name="_method" value="DELETE">
-        <input type="submit" value="Delete">
-    </form>
+    
     <h3>Estimates</h3>
     <% @p.estimates.each do |e| %>
         <% scheme = e.scheme if e.scheme != '' %>
@@ -23,7 +20,12 @@
     <br><br>
     
     <h3><a href='/estimates/new'>Create estimate</a></h3>
+    <h3><a href='/projects/<%=@p.id%>/edit'>Edit Project</a></h3>
     <h3><a href='/projects'>Return to projects</a></h3>
+    <form method="POST" action="/projects/<%=@p.id%>">
+        <input id="hidden" type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete">
+    </form>
     
 
 <html>

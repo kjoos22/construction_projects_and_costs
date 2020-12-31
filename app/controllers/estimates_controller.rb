@@ -2,17 +2,7 @@ class EstimatesController < ApplicationController
     #new
     get '/estimates/new' do
         erb :'/estimates/new'
-    end
-
-    #show
-    get '/estimates/:id' do
-        @e = Estimate.find_by(id: params[:id])
-        if @e
-            erb :'/estimates/show'
-        else 
-            redirect :'/projects/index'
-        end
-    end   
+    end 
 
     #create
     post '/estimates' do
@@ -32,6 +22,31 @@ class EstimatesController < ApplicationController
         
         redirect :'/projects'
     end
+
+    #edit
+    get '/estimates/:id/edit' do
+        @e = Estimate.find_by(id: params[:id])
+    
+        erb :'/estimates/edit'
+    end
+
+    patch '/estimates/:id' do
+        binding.pry
+        estimate = Estimate.find_by(id: params[:id])
+        estimate.update(params[:u])
+     
+        redirect "/estimates/#{estimate.id}"
+    end
+
+     #show
+     get '/estimates/:id' do
+        @e = Estimate.find_by(id: params[:id])
+        if @e
+            erb :'/estimates/show'
+        else 
+            redirect :'/projects/index'
+        end
+    end  
 
     
 end
